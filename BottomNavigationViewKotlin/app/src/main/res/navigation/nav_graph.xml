@@ -2,27 +2,30 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
-
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/homeFragment">
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.bottomnavigationviewkotlin.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
+        android:id="@+id/homeFragment"
+        android:name="com.example.bottomnavigationviewkotlin.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/home_fragment" />
+    <fragment
+        android:id="@+id/rateFragment"
+        android:name="com.example.bottomnavigationviewkotlin.RatedFragment"
+        android:label="Rate"
+        tools:layout="@layout/rate_fragment" >
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_rateFragment_to_ratedFragment"
+            app:destination="@id/ratedFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.bottomnavigationviewkotlin.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+        android:id="@+id/ratedFragment"
+        android:name="com.example.bottomnavigationviewkotlin.RatedFragment"
+        android:label="Thank you for rating us!"
+        tools:layout="@layout/rated_fragment" >
+        <argument
+            android:name="rating"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
 </navigation>
