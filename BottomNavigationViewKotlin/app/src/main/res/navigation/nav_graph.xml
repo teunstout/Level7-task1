@@ -6,12 +6,12 @@
     app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.bottomnavigationviewkotlin.HomeFragment"
+        android:name="com.example.bottomnavigationviewkotlin.fragmetns.HomeFragment"
         android:label="Home"
         tools:layout="@layout/home_fragment" />
     <fragment
         android:id="@+id/rateFragment"
-        android:name="com.example.bottomnavigationviewkotlin.RatedFragment"
+        android:name="com.example.bottomnavigationviewkotlin.fragmetns.RatedFragment"
         android:label="Rate"
         tools:layout="@layout/rate_fragment" >
         <action
@@ -20,12 +20,12 @@
     </fragment>
     <fragment
         android:id="@+id/ratedFragment"
-        android:name="com.example.bottomnavigationviewkotlin.RatedFragment"
+        android:name="com.example.bottomnavigationviewkotlin.fragmetns.RatedFragment"
         android:label="Thank you for rating us!"
         tools:layout="@layout/rated_fragment" >
         <argument
             android:name="rating"
-            app:argType="integer"
+            app:argType="float"
             android:defaultValue="0" />
     </fragment>
 </navigation>
