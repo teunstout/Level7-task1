@@ -4,9 +4,9 @@
     <item
         android:id="@+id/homeFragment"
         android:icon="@drawable/ic_home_grey_24dp"
-        android:title="Home" />
+        android:title="@string/home_nv" />
     <item
         android:id="@+id/rateFragment"
         android:icon="@drawable/ic_star_grey_24dp"
-        android:title="Rate" />
+        android:title="@string/rate_nv" />
 </menu>
