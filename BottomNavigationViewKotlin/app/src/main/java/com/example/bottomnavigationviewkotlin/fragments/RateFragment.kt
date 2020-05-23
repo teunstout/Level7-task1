@@ -1,4 +1,4 @@
-package com.example.bottomnavigationviewkotlin.fragmetns
+package com.example.bottomnavigationviewkotlin.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,9 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.RatingBar
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.bottomnavigationviewkotlin.R
 import kotlinx.android.synthetic.main.rate_fragment.*
+import kotlin.math.absoluteValue
 
 class RateFragment : Fragment() {
 
@@ -23,10 +26,9 @@ class RateFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val btnRate = activity?.findViewById<Button>(R.id.btnRate)
-        // Navigate to RatedFragment and send the rating as arguments.
         btnRate?.setOnClickListener {
-//            val action = RatedFragmentDirections.actionRateFragmentToRatedFragment(rbRate.rating)
-//            findNavController().navigate(action)
+                val action = RateFragmentDirections.actionRateFragmentToRatedFragment(rbRate.rating)
+                findNavController().navigate(action)
         }
     }
 }
